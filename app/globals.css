@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+html, body { background: #09090B; color: #fff; }
+body {
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  text-rendering: optimizeLegibility;
+}
+:focus-visible { outline: 2px solid #FF5C5C; outline-offset: 3px; }
+
+@layer components {
+  .btn-primary {
+    @apply bg-electric text-white shadow-lg shadow-electric/25 transition duration-200 hover:scale-[1.02] hover:bg-electric-hover hover:brightness-110 active:scale-[0.98];
+  }
+  .btn-ghost {
+    @apply transition duration-200 hover:scale-[1.02] hover:bg-white/5 hover:text-white active:scale-[0.98];
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
