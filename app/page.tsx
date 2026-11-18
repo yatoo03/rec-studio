@@ -2,17 +2,23 @@ import GuestFlow from "@/components/GuestFlow";
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center p-24">
-      <GuestFlow slug="demo" />
+    <main className="min-h-screen flex flex-col items-center justify-center p-24 relative">
+      {/* زر اللغة وزر الأدمين (الترس) في أعلى الصفحة */}
+      <div className="absolute top-6 left-6 flex items-center gap-3 z-50">
+        <button className="text-white text-sm font-medium px-3 py-1 rounded-md bg-zinc-800/60 hover:bg-zinc-700 transition">
+          EN
+        </button>
 
-      <div className="flex justify-center items-center my-8">
         <a
           href="/admin"
-          className="px-6 py-3 bg-zinc-900 text-white font-bold rounded-xl shadow-lg hover:bg-zinc-800 transition-all border border-zinc-700 flex items-center gap-2"
+          className="w-9 h-9 flex items-center justify-center rounded-full bg-zinc-800/60 text-white hover:bg-zinc-700 transition"
+          title="لوحة التحكم"
         >
-          ⚙️ الانتقال لوحة التحكم (Admin)
+          ⚙️
         </a>
       </div>
+
+      <GuestFlow slug="demo" />
     </main>
   );
 }
