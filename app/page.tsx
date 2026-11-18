@@ -3,11 +3,15 @@ import GuestFlow from "@/components/GuestFlow";
 export default function Home() {
     return <GuestFlow slug="demo" />;
 }
+import GuestFlow from "@/components/GuestFlow";
+
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col items-center justify-center p-24">
-      {/* باقي محتوى الصفحة الرئيسية عندك */}
-      
+      {/* عرض المكون الأساسي الخاص بالموقع */}
+      <GuestFlow slug="demo" />
+
+      {/* زر الانتقال لوحة التحكم */}
       <div className="flex justify-center items-center my-8">
         <a
           href="/admin"
@@ -17,3 +21,7 @@ export default function Home() {
         </a>
       </div>
     </main>
+  );
+}git add .
+git commit -m "Fix duplicate Home function and add admin button"
+git push
