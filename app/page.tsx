@@ -3,3 +3,11 @@ import GuestFlow from "@/components/GuestFlow";
 export default function Home() {
     return <GuestFlow slug="demo" />;
 }
+<div className="flex justify-center items-center my-8">
+  <a
+    href="/admin"
+    className="px-6 py-3 bg-zinc-900 text-white font-bold rounded-xl shadow-lg hover:bg-zinc-800 transition-all border border-zinc-700 flex items-center gap-2"
+  >
+    ⚙️ الانتقال لوحة التحكم (Admin)
+  </a>
+</div>
